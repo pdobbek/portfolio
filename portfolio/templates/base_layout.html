@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Patryk Dobbek</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  </head>
+  <body>
+    <header class="wrapper">
+      <h1><a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" alt=""></a></h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'about' %}" class="highlight">About</a></li>
+          <li><a href="{% url 'calculator:form' %}">GPU Profitability Calculator</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
