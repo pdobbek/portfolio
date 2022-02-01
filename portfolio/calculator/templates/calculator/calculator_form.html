@@ -2,6 +2,45 @@
 
 {% block content %}
   <div class="calculator-form">
-        <h2>Calculate GPU Profitability</h2>
+        <ul>
+          <li>MHs</li>
+          <li>Power consumption (Watts)</li>
+          <li>GPU price</li>
+          <li>KWh price</li>
+          <li>Dropdown list of GPU from the database</li>
+        </ul>
+        <div class="calculator">
+          <h2>Calculate GPU Profitability</h2>
+          <form class="gpu-entry" action="{% url 'calculator:form' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="name">Name (optional)</label>
+            <input type="text" name="name" id="name" value="{{ calculator.name }}">
+
+            <label for="mhs">Hashrate (MHs)</label>
+            <input type="text" name="mhs" id="mhs" value="{{ calculator.mhs }}">
+
+            <label for="power">Power consumption (W)</label>
+            <input type="text" name="power" id="power" value="{{ calculator.power }}">
+
+            <label for="price">Price (GBP)</label>
+            <input type="text" name="price" id="price" value="{{ calculator.price }}">
+
+            <label for="kwh_price">Electricity cost (KWh)</label>
+            <input type="text" name="kwh_price" id="kwh_price" value="{{ calculator.kwh_price }}">
+
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+        <div class="gpu-details">
+          <!-- Display calcuated data below -->
+          <p>{{ calculator.name }}</p>
+          <p>{{ calculator.mhs }}</p>
+          <p>{{ calculator.power }}</p>
+          <p>{{ calculator.price }}</p>
+          <p>{{ calculator.kwh_price }}</p>
+          <p>{{ calculator.efficiency }}</p>
+          <p>{{ calculator.epp }}</p>
+          <p>{{ calculator.roi }}</p>
+        </div>
   </div>
 {% endblock %}

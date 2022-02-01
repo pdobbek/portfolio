@@ -1,5 +1,12 @@
-from ethereum import Ethereum
-from period import Period
+if __package__:
+    from .ethereum import Ethereum
+    from .period import Period
+else:
+    import sys
+    import os
+    sys.path.append(os.path.dirname(__file__) + '/.')
+    from ethereum import Ethereum
+    from period import Period
 
 POOL_FEE = 0.01  # placeholder
 

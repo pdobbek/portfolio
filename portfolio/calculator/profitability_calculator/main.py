@@ -1,5 +1,12 @@
 import csv
-from gpu import GPU
+
+if __package__:
+    from .gpu import GPU
+else:
+    import sys
+    import os
+    sys.path.append(os.path.dirname(__file__) + '/.')
+    from gpu import GPU
 
 
 gpus = list()

@@ -1,5 +1,6 @@
 import requests
 from requests.exceptions import HTTPError
+import os
 
 
 class Ethereum:
@@ -18,7 +19,7 @@ class Ethereum:
         if Ethereum.__instance is None:
             Ethereum.__instance = self
 
-            with open("api.bin", encoding="utf-8") as binary_file:
+            with open(os.path.dirname(__file__) + "/api.bin", encoding="utf-8") as binary_file:
                 api_key = binary_file.read()
             request_str = "https://min-api.cryptocompare.com/data/blockchain/mining/calculator?fsyms=ETH&tsyms=GBP"
             response = requests.get("%s&api_key{%s}" % (request_str, api_key))
