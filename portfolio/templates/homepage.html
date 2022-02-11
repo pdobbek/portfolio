@@ -43,10 +43,28 @@
       </div>
 
       <div class="home__scroll">
-        <a href="#skills" class="home__scroll-button button--flex">
+        <a href="#about" class="home__scroll-button button--flex">
           <i class="uil uil-mouse-alt home__scroll-mouse"></i>
           <span class="home__scroll-name">Scroll down</span>
           <i class="uil uil-arrow-down home__scroll-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <h2 class="section__title">About me</h2>
+    <span class="section__subtitle">Quick introduction</span>
+
+    <div class="about__container container grid">
+      <img src="{% static '/img/about.png' %}" alt="" class="about__img">
+      <div class="about__data">
+        <p class="about__description">Motivated, proactive developer with an academic record of delivering high quality work alone and leading small teams.</p>
+      </div>
+      
+      <div class="about__buttons">
+        <a download="" href="{% static '/pdf/patryk-dobbek-cv.pdf' %}" class="button button--flex">
+          Download CV <i class="uil uil-download-alt button__icon"></i>
         </a>
       </div>
     </div>

@@ -283,7 +283,7 @@ img {
 }
 
 .home__scroll {
-    /* display: none; */
+/*     display: none; */
 }
 
 .home__scroll-button {
@@ -333,4 +333,23 @@ img {
 .button--flex {
     display: inline-flex;
     align-items: center;
+}
+
+/* ABOUT */
+.about__img {
+    width: 180px;
+    border-radius: .5rem;
+    background-color: var(--first-color);
+    justify-self: center;
+    align-self: center;
+}
+
+.about__description {
+    text-align:center;
+    margin-bottom: var(--mb-2-5);
+}
+
+.about__buttons {
+    display: flex;
+    justify-content: center;
 }
