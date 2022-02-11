@@ -7,18 +7,18 @@
 
     /* Colours */
     --hue-color: 225;
-    --first-color: hsl(225, 30%, 11%);
+    --first-color: hsl(225, 45%, 60%);
     --second-color: hsl(47, 78%, 59%);
     --third-color: #0049FF;
-    --first-color-second: hsl(var(--hue-color), 30%, 11%);
-    --first-color-alt: hsl(var(--hue-color), 30%, 45%);
-    --first-color-lighter: hsl(var(--hue-color), 60%, 24%);
-    --title-color: hsl(var(--hue-color), 45%, 60%);
-    --text-color: hsl(var(--hue-color), 7%, 9%);
-    --text-color-light: hsl(var(--hue-color), 7%, 13%);
-    --input-color: hsl(var(--hue-color), 29%, 96%);
-    --body-color: hsl(var(--hue-color), 26%, 99%);
-    --container-color: var(second-colour);
+    --first-color-second: hsl(var(--hue-color), 45%, 60%);
+    --first-color-alt: hsl(var(--hue-color), 40%, 55%);
+    --first-color-lighter: hsl(var(--hue-color), 90%, 85%);
+    --title-color: hsl(var(--hue-color), 9%, 18%);
+    --text-color: hsl(var(--hue-color), 9%, 45%);
+    --text-color-light: hsl(var(--hue-color), 9%, 65%);
+    --input-color: hsl(var(--hue-color), 50%, 96%);
+    --body-color: hsl(var(--hue-color), 50%, 99%);
+    --container-color: #FFF;
 
     /* Fonts */
     --body-font: 'Poppins', sans-serif;
