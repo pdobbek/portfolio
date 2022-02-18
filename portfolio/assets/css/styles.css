@@ -345,11 +345,62 @@ img {
 }
 
 .about__description {
-    text-align:center;
-    margin-bottom: var(--mb-2-5);
+    text-align: center;
+    margin-bottom: var(--mb-0-5);
 }
 
 .about__buttons {
     display: flex;
     justify-content: center;
+}
+
+/* SKILLS */
+.skills__img {
+    width: 25px;
+}
+
+.skills__container {
+    row-gap: 0;
+}
+
+.skills__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--mb-2-5);
+    cursor: pointer;
+}
+
+.skills__icon,
+.skills__arrow {
+    font-size: 2rem;
+    color: var(--first-color);
+}
+
+.skills__icon {
+    margin-right: var(--mb-0-75);
+}
+
+.skills__title {
+    font-size: var{--h3-font-size};
+}
+
+.skills__subtitle {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.skills__arrow {
+    margin-left: auto;
+    transition: 0.4s;
+}
+
+.skills__titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--mb-0-5);
+}
+
+.skills__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
 }
