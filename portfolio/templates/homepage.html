@@ -94,7 +94,6 @@
               <div class="skills__titles">
                 <h3 class="skills__name">HTML</h3>
                 <img src="{% static '/img/html.svg' %}" class="skills__img">
-
               </div>
             </div>
 
@@ -130,6 +129,13 @@
               <div class="skills__titles">
                 <h3 class="skills__name">WPF</h3>
                 <img src="{% static '/img/arrow.svg' %}" class="skills__img">
+              </div>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__titles">
+                <h3 class="skills__name">PostgreSQL</h3>
+                <img src="{% static '/img/postgresql.svg' %}" class="skills__img">
               </div>
             </div>
 
@@ -205,7 +211,7 @@
 
             <div class="skills__data">
               <div class="skills__titles">
-                <h3 class="skills__name">Taking criticism</h3>
+                <h3 class="skills__name">Taking feedback</h3>
                 <img src="{% static '/img/comment-exclamation.svg' %}" class="skills__img">
               </div>
             </div>
@@ -215,6 +221,59 @@
     </div>
   </section>
 
-  <!--========================================== ATTRIBUTIONS ==========================================-->
+  <!--========================================== EDUCATION ==========================================-->
+  <section class="education section" id="education">
+    <h2 class="section__title">Education</h2>
+    <span class="section__subtitle">Where I studied</span>
+
+    <div class="education__container container grid">
+      <div class="education__content">
+        <div class="education__header">
+          <img src="{% static '/img/uea.jpg' %}" alt="" class="education__img">
+          <div class="education__head">
+            <h1 class="education__title">Computing Science BSc</h1>
+            <span class="education__class">First-Class</span>
+          </div>
+        </div>
+
+        <div class="education__list grid">
+          <div class="education__module">
+            <div class="education__titles">
+              <h3 class="education__name">Software Engineering</h3>
+              <div class="education__grade">
+                <span class="education__grade-text">Grade</span>
+                <span class="education__grade-percent">83%</span>
+              </div>
+            </div>
+            <p class="education__text">Lead a small team in developing a WPF, PostgreSQL solution using the Scrum framework.</p>
+          </div>
+
+          <div class="education__module">
+            <div class="education__titles">
+              <h3 class="education__name">Machine Learning</h3>
+              <div class="education__grade">
+                <span class="education__grade-text">Grade</span>
+                <span class="education__grade-percent">75%</span>
+              </div>
+            </div>
+            <p class="education__text">Developed an extended ID3 classifier implemented in Java using the Weka library.</p>
+          </div>
+
+          <div class="education__module">
+            <div class="education__titles">
+              <h3 class="education__name">Networks</h3>
+              <div class="education__grade">
+                <span class="education__grade-text">Grade</span>
+                <span class="education__grade-percent">74%</span>
+              </div>
+            </div>
+            <p class="education__text">VoIP application developed in Python. Successfully achieved a goal of obtaining a first-class mark while working alone on a project intended for four people.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--========================================= ATTRIBUTIONS =========================================-->
   <a href="https://iconscout.com/icons/scrum" target="_blank">Scrum Icon</a> by <a href="https://iconscout.com/contributors/lutfix">LUTFI ACHMAD</a> on <a href="https://iconscout.com">Iconscout</a>
 {% endblock %}
