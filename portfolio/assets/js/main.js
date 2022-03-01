@@ -44,4 +44,18 @@ function toggleSkills() {
         this.parentNode.className = 'skills__content skills__open'
     }
 }
-skillsHeader.forEach(n => n.addEventListener('click', toggleSkills)) 
+skillsHeader.forEach(n => n.addEventListener('click', toggleSkills))
+
+/* PROJECTS SWIPER */
+let swiper = new Swiper(".projects__container", {
+    cssMode: true,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+});

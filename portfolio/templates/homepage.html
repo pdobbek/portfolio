@@ -37,7 +37,7 @@
         <h1 class="home__title"> Hi, I'm Patryk </h1>
         <h3 class="home__subtitle">Software Engineer.</h3>
         <p class="home__description">I recently graduated from University of East Anglia with a First-Class Computer Science degree and I'm looking for my first job.</p>
-        <a href="#contact" class="button button--flex">
+        <a href="#contact" class="button button--flex button__right">
           Contact Me <i class="uil uil-message button__icon"></i>
         </a>
       </div>
@@ -64,7 +64,7 @@
       </div>
       
       <div class="about__buttons">
-        <a download="" href="{% static '/pdf/patryk-dobbek-cv.pdf' %}" class="button button--flex">
+        <a download="" href="{% static '/pdf/patryk-dobbek-cv.pdf' %}" class="button button--flex button__down">
           Download CV <i class="uil uil-download-alt button__icon"></i>
         </a>
       </div>
@@ -279,53 +279,61 @@
     <h2 class="section__title">My Projects</h2>
     <span class="section__subtitle">What I've worked on in my spare time</span>
 
-    <div class="projects__container container">
-      <div>
+    <div class="projects__container container swiper">
+      <div class="swiper-wrapper">
         <!--================= PROJECT 1 ================-->
-        <div class="projects__content grid">
+        <div class="projects__content grid swiper-slide">
           <img src="{% static '/img/project1.png' %}" alt="" class="projects__img">
 
           <div class="projects__data">
             <h3 class="projects__title">ElaDungeon</h3>
             <p class="projects__description">A small top-down RPG game intended as a greeting card for my partner's little sister. Developed in Unity using C#.</p>
-            <a href="#" class="button button--flex button--small projects__button">
+            <a href="https://github.com/pdobbek/ela-dungeon" class="button button--flex button--small projects__button">
               GitHub <i class="uil uil-github button__icon"></i>
             </a>
-            <a href="#" class="button button--flex button--small projects__button">
+            <a href="#" class="button button--flex button--small projects__button button__down">
               Download <i class="uil uil-download-alt button__icon"></i>
             </a>
           </div>
         </div>
 
         <!--================= PROJECT 2 ================-->
-        <div class="projects__content grid">
+        <div class="projects__content grid swiper-slide">
           <img src="{% static '/img/project2.png' %}" alt="" class="projects__img">
 
           <div class="projects__data">
             <h3 class="projects__title">GPU Profitability Calculator</h3>
             <p class="projects__description">A simple Python program for calculating efficiency of GPUs mining Ethereum.</p>
-            <a href="#" class="button button--flex button--small projects__button">
+            <a href="https://github.com/pdobbek/profitability-calculator" class="button button--flex button--small projects__button">
               GitHub <i class="uil uil-github button__icon"></i>
             </a>
           </div>
         </div>
 
         <!--================= PROJECT 3 ================-->
-        <div class="projects__content grid">
+        <div class="projects__content grid swiper-slide">
           <img src="{% static '/img/project3.png' %}" alt="" class="projects__img">
 
           <div class="projects__data">
             <h3 class="projects__title">This website</h3>
             <p class="projects__description">My first real venture into web development.</p>
-            <a href="#" class="button button--flex button--small projects__button">
+            <a href="https://github.com/pdobbek/portfolio-site" class="button button--flex button--small projects__button">
               GitHub <i class="uil uil-github button__icon"></i>
             </a>
           </div>
         </div>
       </div>
+      <!-- Swiper arrows -->
+      <div class="swiper-button-next">
+        <i class="uil uil-angle-right-b swiper-projects-icon"></i>
+      </div>
+      <div class="swiper-button-prev">
+        <i class="uil uil-angle-left-b swiper-projects-icon"></i>
+      </div>
+      <!-- Swiper pagination -->
+      <div class="swiper-pagination"></div>
     </div>
   </section>
-
   <!--========================================= ATTRIBUTIONS =========================================-->
   <a href="https://iconscout.com/icons/scrum" target="_blank">Scrum Icon</a> by <a href="https://iconscout.com/contributors/lutfix">LUTFI ACHMAD</a> on <a href="https://iconscout.com">Iconscout</a>
 {% endblock %}
