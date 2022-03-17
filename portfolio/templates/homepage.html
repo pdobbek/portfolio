@@ -371,29 +371,32 @@
         </div>
       </div>
 
-      <form action="" class="contact__form grid">
+      <form method="post" class="contact__form grid">
+        {% include 'messages.html' %}
+        {% csrf_token %}
         <div class="contact__inputs grid">
           <div class="contact__content">
-            <label for="" class="contact__label">Name</label>
-            <input type="text" class="contact__input">
+            <label for="from_email" class="contact__label">Email</label>
+            <input name="from_email" type="email" class="contact__input">
           </div>
           <div class="contact__content">
-            <label for="" class="contact__label">Email</label>
-            <input type="email" class="contact__input">
+            <label for="subject" class="contact__label">Subject</label>
+            <input name="subject" type="text" class="contact__input">
           </div>
         </div>
         
         <div class="contact__content">
-          <label for="" class="contact__label">Message</label>
-          <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+          <label for="message" class="contact__label">Message</label>
+          <textarea name="message" id="message" cols="0" rows="7" class="contact__input"></textarea>
         </div>
         <div>
-          <a href="#" class="button button--flex button--right">
+          <button type="submit" class="button button--flex button--right">
             Send Message
             <i class="uil uil-message button__icon"></i>
           </a>
         </div>
       </form>
+
     </div>
 
   </section>
