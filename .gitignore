@@ -139,3 +139,4 @@ GitHub.sublime-settings
 # script that makes an API key binary  file. Contains the API key.
 /api_bin_maker.py
 /api.bin
+.vercel
