@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^p41_h=3ib(sfhhz0y5s2_biupy(!4j0u_h59=2v^iamzmd*mg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1']
+ALLOWED_HOSTS = ['portfoliosite-env.eba-qrbt88md.eu-west-2.elasticbeanstalk.com', '127.0.0.1']
 
 
 # Application definition
@@ -75,14 +75,14 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {}  # Prevents Django from loading an adapter
+# DATABASES = {}  # Prevents Django from loading an adapter
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation
@@ -119,9 +119,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR.joinpath('static')
 STATICFILES_DIRS = (
-    BASE_DIR.joinpath('assets'),
+    BASE_DIR.joinpath('static'),
 )
 
 MEDIA_URL = 'media/'
@@ -131,6 +132,3 @@ MEDIA_ROOT = BASE_DIR.joinpath('media')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
