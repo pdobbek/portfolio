@@ -136,7 +136,7 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 
-# script that makes an API key binary  file. Contains the API key.
+# script that makes an API key binary file. Contains the API key.
 /api_bin_maker.py
 /api.bin
 .vercel
