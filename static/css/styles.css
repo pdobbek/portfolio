@@ -771,7 +771,8 @@ button, input[type="submit"], input[type="reset"] {
     }
 
     .skills__container,
-    .education__container {
+    .education__container,
+    .projects__content {
         grid-template-columns: repeat(2, 1fr);
     }
 
