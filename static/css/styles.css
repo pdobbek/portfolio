@@ -286,7 +286,7 @@ img {
 }
 
 .home__scroll {
-/*     display: none; */
+    display: none;
 }
 
 .home__scroll-button {
@@ -778,7 +778,6 @@ button, input[type="submit"], input[type="reset"] {
 
     .about__img {
         order: -1;
-        transform: translateY(20px);
         margin-right: -50px;
     }
 
