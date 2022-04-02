@@ -765,7 +765,8 @@ button, input[type="submit"], input[type="reset"] {
         justify-self: center;
     }
 
-    .about__container {
+    .about__container,
+    .contact__container {
         grid-template-columns: 0.7fr 1.3fr;
     }
 
@@ -884,5 +885,46 @@ button, input[type="submit"], input[type="reset"] {
 
     .footer__bg {
         padding: 2rem 0 3.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header,
+    .main,
+    .footer__container {
+        padding: 0;
+    }
+
+    .home__blob {
+        width: 320px;
+        transform: translateX(1rem);
+    }
+
+    .home__social {
+        transform: translateX(-5rem);
+    }
+
+    .projects__content {
+        column-gap: 4rem;
+    }
+
+    .swiper-projects-icon {
+        font-size: 3rem;
+    }
+
+    .swiper-button-prev {
+        left: -3.5rem;
+    }
+
+    .swiper-button-next {
+        right: -3.5rem;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets {
+        bottom: -4.5rem;
+    }
+
+    .contact__inputs {
+        grid-template-columns: 0.8fr 1.2fr;
     }
 }
