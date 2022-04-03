@@ -10,11 +10,11 @@ def homepage(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = "PORTFOLIO CONTACT: " + form.cleaned_data["subject"]
+            subject = form.cleaned_data["subject"]
             from_email = form.cleaned_data["from_email"]
             message = "from_email=" + from_email + "\n\n" + form.cleaned_data["message"]
             try:
-                send_mail(subject, message, "p.dobbek@pm.me", ["p.dobbek@pm.me"], fail_silently=False)
+                send_mail(subject, message, "contactform@patrykdobbek.com", ["p.dobbek@pm.me"], fail_silently=False)
                 messages.success(request, "Email sent succesfully. Thank you!")
                 return redirect("home")
             except BadHeaderError:
