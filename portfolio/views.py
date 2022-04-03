@@ -10,7 +10,7 @@ def homepage(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = "PORTFOLIO CONTACT: " + subject
+            subject = "PORTFOLIO CONTACT: " + form.cleaned_data["subject"]
             from_email = form.cleaned_data["from_email"]
             message = "from_email=" + from_email + "\n\n" + form.cleaned_data["message"]
             try:
