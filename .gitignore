@@ -145,3 +145,7 @@ GitHub.sublime-settings
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+# Amazon SES access key
+aws_access_key_id.bin
+aws_secret_access_key.bin

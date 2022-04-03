@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^p41_h=3ib(sfhhz0y5s2_biupy(!4j0u_h59=2v^iamzmd*mg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['portfoliosite-env.eba-qrbt88md.eu-west-2.elasticbeanstalk.com', '127.0.0.1']
+ALLOWED_HOSTS = ['patrykdobbek.com', 'portfoliosite-env.eba-qrbt88md.eu-west-2.elasticbeanstalk.com', '127.0.0.1']
 
 
 # Application definition
@@ -132,3 +132,15 @@ MEDIA_ROOT = BASE_DIR.joinpath('media')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django_ses.SESBackend'
+AWS_SES_REGION_NAME = 'eu-west-2'
+AWS_SES_REGION_ENDPOINT = 'email.eu-west-2.amazonaws.com'
+
+with open("aws_access_key_id.bin", encoding="utf-8") as binary_file:
+    access_key_id = binary_file.read()
+with open("aws_secret_access_key.bin", encoding="utf-8") as binary_file:
+    secret_access_key = binary_file.read()
+
+AWS_ACCESS_KEY_ID = access_key_id
+AWS_SECRET_ACCESS_KEY = secret_access_key
