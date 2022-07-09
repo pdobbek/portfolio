@@ -24,6 +24,7 @@ from . import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('calculator/', include('calculator.urls')),
+    path('algoviewer/', include('algoviewer.urls')),
     path('', views.homepage, name='home'),
     path('about/', views.about, name='about'),
 ]
