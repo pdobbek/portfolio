@@ -94,9 +94,9 @@
       </div>
     </footer>
 
-    <!-------------------------------------SWIPER JS------------------------------------->
-    <script src="{% static '/js/swiper-bundle.min.js' %}"></script>
     <!-------------------------------------MAIN JS------------------------------------->
     <script src="{% static '/js/main.js' %}"></script>
+    {% block extrajs %}
+    {% endblock %}
   </body>
 </html>
